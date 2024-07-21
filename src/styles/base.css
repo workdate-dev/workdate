@@ -1,0 +1,16 @@
+html {
+    font-size: var(--font-size-medium);
+    font-family: var(--sans-font);
+}
+
+body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#app {
+    height: 100vh;
+}

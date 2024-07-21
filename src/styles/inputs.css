@@ -1,0 +1,72 @@
+/* Text inputs */
+.input {
+    accent-color: var(--input-accent-color, var(--color-ink));
+    background-color: var(--input-background, transparent);
+    border-radius: var(--input-border-radius, 0.5em);
+    border: 1px solid var(--color-border);
+    color: var(--input-color, var(--color-ink));
+    font-size: 1em;
+    inline-size: 100%;
+    line-height: 1.2;
+    max-inline-size: 100%;
+    padding: var(--input-padding, 0.5em 0.8em);
+    resize: none;
+
+    &:autofill,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        -webkit-text-fill-color: var(--color-ink);
+        -webkit-box-shadow: 0 0 0px 1000px var(--color-selected) inset;
+    }
+
+    &:where(:not(:active)):focus {
+        --input-border-color: var(--color-selected-dark);
+        --hover-color: var(--color-selected-dark);
+        --outline-size: 0;
+        --outline-color: transparent;
+
+        filter: var(--hover-filter);
+        box-shadow: 0 0 0 var(--hover-size) var(--hover-color);
+    }
+}
+
+.input--file {
+    border: 0;
+    cursor: pointer;
+    display: grid;
+    inline-size: auto;
+    place-items: center;
+
+    > * {
+        grid-area: 1 / 1;
+    }
+
+    img {
+        border-radius: 0.4em;
+    }
+
+    input[type="file"] {
+        --input-border-color: transparent;
+        --input-border-radius: 8px;
+
+        block-size: 100%;
+        cursor: pointer;
+        font-size: 0;
+        inline-size: 100%;
+        overflow: clip;
+
+        &::file-selector-button {
+            appearance: none;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        &:focus,
+        &:focus-visible {
+            --input-border-color: var(--color-selected-dark);
+            --input-border-radius: 8px;
+            --input-border-size: 0.15rem;
+        }
+    }
+}

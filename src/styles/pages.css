@@ -1,0 +1,13 @@
+.page {
+    margin: 0 auto;
+    padding: 3rem;
+    width: 100%;
+}
+
+.page--medium {
+    max-width: 50em;
+}
+
+.page--small {
+    max-width: 25em;
+}

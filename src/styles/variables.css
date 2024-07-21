@@ -1,0 +1,68 @@
+/* Global variables. */
+:root,
+::backdrop {
+    --space-base: 1em;
+    --space-1: calc(var(--space-base) * 0.125);
+    --space-2: calc(var(--space-base) * 0.25);
+    --space-3: calc(var(--space-base) * 0.375);
+    --space-4: calc(var(--space-base) * 0.5);
+    --space-6: var(--space-base);
+    --space-9: calc(var(--space-base) * 1.5);
+    --space-12: calc(var(--space-base) * 2);
+    --space-18: calc(var(--space-base) * 3);
+
+    --font-size-base: 1em;
+    --font-size-x-small: calc(var(--font-size-base) * 0.75);
+    --font-size-small: calc(var(--font-size-base) * 0.9375);
+    --font-size-medium: var(--font-size-base);
+    --font-size-large: calc(var(--font-size-base) * 1.125);
+    --font-size-x-large: calc(var(--font-size-base) * 1.25);
+    --font-size-xx-large: calc(var(--font-size-base) * 1.5);
+
+    /* Set sans-serif & mono fonts */
+    --sans-font: Roboto, -apple-system, BlinkMacSystemFont, "Avenir Next",
+        Avenir, "Nimbus Sans L", "Noto Sans", "Segoe UI", Arial, Helvetica,
+        "Helvetica Neue", sans-serif;
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono",
+        monospace;
+
+    /* Rounded corenr */
+    --rounded-xl: 3rem;
+
+    /* Default (light) theme */
+    --color-bg-main: #fff;
+    --color-bg-light: #f4f5f5;
+    --color-border: #bababa;
+    --color-primary: #0092fb;
+    --color-primary-light: #eff8ff;
+    --color-text: #262626;
+    --color-text-reversed: #fff;
+    --color-text-secondary: #5e5e5e;
+    --color-surface-bg: #000;
+    --color-surface-text: #fff;
+    --color-surface-text-secondary: #5e5e5e;
+    --color-surface-border: #333;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root,
+    ::backdrop {
+        color-scheme: dark;
+        --bg: #212121;
+        --accent-bg: #2b2b2b;
+        --text: #dcdcdc;
+        --text-light: #ababab;
+        --accent: #ffb300;
+        --accent-hover: #ffe099;
+        --accent-text: var(--bg);
+        --code: #f06292;
+        --preformatted: #ccc;
+        --disabled: #111;
+    }
+    /* Add a bit of transparency so light media isn't so glaring in dark mode */
+    img,
+    video {
+        opacity: 0.8;
+    }
+}
