@@ -7,13 +7,13 @@ export interface EventSubscriber<T extends (...args: any[]) => void> {
     removeListener(callback: T): void;
 }
 
-export class EventEmitter<T extends (...args: any[]) => void>
+export class EventEmitter<T extends (...args: unknown[]) => void>
     implements EventSubscriber<T>
 {
     private listeners: Listener<T>[] = [];
 
     public addListener(callback: T) {
-        this.listeners.push({ callback });
+        this.listeners.push({callback});
     }
 
     public removeListener(callback: T) {
