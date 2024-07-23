@@ -1,5 +1,5 @@
-import { EventEmitter, EventSubscriber } from "./eventEmitter";
-import navigation from "./navigation";
+import { EventEmitter, EventSubscriber } from './eventEmitter';
+import navigation from './navigation';
 
 export interface RouterState {
     projectId?: number;
@@ -26,9 +26,9 @@ export class Router {
     }
 
     private handleHashChange = (hash: string) => {
-        if (hash.startsWith("#p")) {
+        if (hash.startsWith('#p')) {
             this.innerState = { projectId: parseInt(hash.slice(2)) };
-        } else if (hash.startsWith("#t")) {
+        } else if (hash.startsWith('#t')) {
             this.innerState = { taskId: parseInt(hash.slice(2)) };
         } else {
             this.innerState = {};

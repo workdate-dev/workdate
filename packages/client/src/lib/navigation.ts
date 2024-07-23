@@ -1,4 +1,4 @@
-import { EventEmitter, EventSubscriber } from "./eventEmitter";
+import { EventEmitter, EventSubscriber } from './eventEmitter';
 
 export type NavigationItem = {
     onPop: () => void;
@@ -20,13 +20,13 @@ export class Navigator {
     }
 
     constructor() {
-        window.addEventListener("popstate", this.handlePopState);
-        window.addEventListener("keydown", this.handleKeyDown, {
+        window.addEventListener('popstate', this.handlePopState);
+        window.addEventListener('keydown', this.handleKeyDown, {
             capture: true,
-            passive: false,
+            passive: false
         });
 
-        history.scrollRestoration = "manual";
+        history.scrollRestoration = 'manual';
     }
 
     private handlePopState = (_: PopStateEvent): void => {
@@ -36,13 +36,13 @@ export class Navigator {
     };
 
     private handleKeyDown = (event: KeyboardEvent): void => {
-        if (event.key === "Escape") {
+        if (event.key === 'Escape') {
             this.onEscape();
         }
     };
 
     private changeHash(hash: string): void {
-        this.currentHash = hash.startsWith("#") ? hash : `#${hash}`;
+        this.currentHash = hash.startsWith('#') ? hash : `#${hash}`;
         this.hashchangeEmitter.dispatch(this.currentHash);
     }
 

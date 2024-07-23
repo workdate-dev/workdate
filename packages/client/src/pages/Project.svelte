@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { useProject } from "src/hooks/useProject.svelte.ts";
-    import ProjectsSidebar from "../components/ProjectsSidebar.svelte";
-    import EllipsisHorizontalCircle from "src/components/icons/EllipsisHorizontalCircle.svelte";
+    import { useProject } from 'src/hooks/useProject.svelte.ts';
+    import ProjectsSidebar from '../components/ProjectsSidebar.svelte';
+    import EllipsisHorizontalCircle from 'src/components/icons/EllipsisHorizontalCircle.svelte';
 
     const project = useProject();
 </script>

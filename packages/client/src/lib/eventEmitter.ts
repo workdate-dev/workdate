@@ -18,11 +18,11 @@ export class EventEmitter<T extends (...args: any[]) => void>
 
     public removeListener(callback: T) {
         this.listeners = this.listeners.filter(
-            (listener) => listener.callback !== callback,
+            listener => listener.callback !== callback
         );
     }
 
     public dispatch(...args: Parameters<T>) {
-        this.listeners.forEach((listener) => listener.callback(...args));
+        this.listeners.forEach(listener => listener.callback(...args));
     }
 }

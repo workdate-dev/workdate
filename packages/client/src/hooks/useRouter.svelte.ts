@@ -1,5 +1,5 @@
-import router from "src/lib/router";
-import type { RouterState } from "src/lib/router";
+import type { RouterState } from 'src/lib/router';
+import router from 'src/lib/router';
 
 export function useRouter() {
     let route = $state(router.state);
@@ -16,6 +16,6 @@ export function useRouter() {
     return {
         get route() {
             return route;
-        },
+        }
     };
 }
