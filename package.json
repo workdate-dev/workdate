@@ -1,12 +1,13 @@
 {
-    "name": "workdate-monorepo",
-    "workspaces": [
-      "packages/*"
-    ],
-    "scripts": {
-    },
-    "devDependencies": {
-    },
-    "dependencies": {
-    }
-  }
+  "name": "workdate-monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "gts": "^5.2.0",
+    "prettier": "^3.3.2",
+    "prettier-plugin-organize-imports": "^3.2.3"
+  },
+  "dependencies": {}
+}
