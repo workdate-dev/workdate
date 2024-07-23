@@ -13,7 +13,6 @@
         "isolatedModules": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        // google tsconfig
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
         "forceConsistentCasingInFileNames": true,

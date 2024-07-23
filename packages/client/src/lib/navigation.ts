@@ -29,7 +29,7 @@ export class Navigator {
         history.scrollRestoration = 'manual';
     }
 
-    private handlePopState = (_: PopStateEvent): void => {
+    private handlePopState = (_: ): void => {
         const hash = window.location.hash;
         this.local = [];
         this.changeHash(hash);
