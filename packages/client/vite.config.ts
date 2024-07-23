@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
-import { svelte, vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { svelte, vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
@@ -7,8 +7,8 @@ export default defineConfig(async () => ({
     preprocess: vitePreprocess(),
     resolve: {
         alias: {
-            src: "/src",
-        },
+            src: '/src'
+        }
     },
 
     // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
@@ -21,7 +21,7 @@ export default defineConfig(async () => ({
         strictPort: true,
         watch: {
             // 3. tell vite to ignore watching `src-tauri`
-            ignored: ["**/src-tauri/**"],
-        },
-    },
+            ignored: ['**/src-tauri/**']
+        }
+    }
 }));
