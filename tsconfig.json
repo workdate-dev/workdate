@@ -1,16 +1,27 @@
 {
-  "extends": "./node_modules/gts/tsconfig-google.json",
-  "compilerOptions": {
-    "rootDir": ".",
-    "outDir": "dist",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "esModuleInterop": true,
-    "noErrorTruncation": true,
-    "declaration": true,
-    "noImplicitAny": false,
-    "noEmitOnError": false,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true
-  }
+    "compilerOptions": {
+        "rootDir": ".",
+        "outDir": "dist",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "esModuleInterop": true,
+        "noErrorTruncation": true,
+        "declaration": true,
+        "noImplicitAny": false,
+        "noEmitOnError": false,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        // google tsconfig
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["es2018"],
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "pretty": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "es2018"
+    },
+    "exclude": ["node_modules"]
 }
