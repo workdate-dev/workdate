@@ -1,0 +1,30 @@
+{
+    "name": "@workdate/lib",
+    "version": "0.0.1",
+    "description": "workdate data layer",
+    "license": "AGPL-3.0-only",
+    "main": "dist/src/index.js",
+    "types": "dist/src/index.d.ts",
+    "files": [
+        "dist/src"
+    ],
+    "exports": {
+        ".": "./dist/src/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tilyupo/qustar.git",
+        "directory": "packages/qustar-sqlite3"
+    },
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "build:watch": "tsc -w",
+        "deploy": "npm run build && node ../../deploy.js",
+        "test": "vitest run"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "vitest": "^1.6.0"
+    }
+}
